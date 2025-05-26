@@ -1,43 +1,75 @@
-body {
+* {
     padding: 0;
     margin: 0;
 }
 
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.2;
+}
+
 .container {
     display: grid;
-    grid-template-columns: repeat(1, 20vw) repeat(1, 80vw);
-    height: 100vh;
-    width: 100vw;
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(1, 20%) repeat(1, 75%);
+    height: 100%;
+    width: 100%;
 }
 
 .dashboard {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background-color: blue;
-    height: 100vh;
+    height: 100%;
     color: white;
 }
 
 .icon {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: smaller;
     align-items: center;
+    /* color: white; */
+    filter: brightness(0) invert(1);
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.big, .top{
+    padding-bottom: 20px;
+}
+
+h2, h4{
+    margin-left: 20px;
+    align-self: center;
+}
+
+svg {
+    padding-left: 10px;
+    color: white;
+    overflow: visible;
+    height: 15px;
+    width: auto;
+}
+
+.viewBox{
     color: white;
 }
 
-svg{
-    padding-left: 10px;
-    /* color: white; */
-    overflow: visible;
-    height: 20px;
+.dash{
+    height: 30px;
+    width: auto;
+}
+
+.textIcon{
+    height: 10px;
     width: auto;
 }
 
 .left {
     display: grid;
-    grid-template-rows: repeat(1, 20vh) repeat(1, 80vh);
+    grid-template-rows: repeat(1, 20%) repeat(1, 80%);
     height: 100vh;
 }
 
@@ -47,17 +79,167 @@ svg{
 }
 
 .header-top{
+    display: grid;
+    grid-template-columns: repeat(1, 70%) repeat(1, 30%);
+    margin: 1%;
+}
+
+.topL,
+.bottomL{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 3%;
+    align-items: center;
+}
+
+.sunny{
+    align-self: center;
+}
+
+.topR,
+.bottomR{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+    align-items: center;
+}
+
+.bell{
+    margin-right: 25px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.large{
+    font-weight: 900;
+}
+
+
+input{
+    height: 70%;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #dae8ec;
+    border: none;
 }
 
 .header-bottom{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1%;
+}
+
+button{
+    height: 70%;
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
 }
 
 .main {
     background-color: #dae8ec;
     display: grid;
-    grid-template-columns: repeat(1, 70vw) repeat(1, 30vw);
+    grid-template-columns: repeat(1, 70%) repeat(1, 30%);
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.myCards{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+}
+
+h4{
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+h5{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p,
+.trendTxt{
+    font-size: x-small;
+    color: #4a7986;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 5px solid rgb(239, 182, 11);
+}
+
+.cardIcon{
+    align-self: flex-end;
+}
+
+.card,
+.announceCard,
+.trending{
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.annText{
+    font-size: 0.4rem;
+    color: #4a7986;
+}
+
+.line{
+    height: 1px;
+    width: 150px;
+    background-color: #dae8ec;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trend{
+    display: flex;
+}
+
+.email{
+    font-size: x-small;
+}
+
+.emoji{
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.unicon{
+    background-color: lightblue;
+}
+
+.sun{
+    background-color: plum;
+    flex-shrink: 0;
+}
+
+.alian{
+    background-color: yellow;
+}
+
+.crown{
+    background-color: pink;
 }
